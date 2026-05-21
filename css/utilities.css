@@ -1,0 +1,123 @@
+/* ============================================
+   کلاس‌های کمکی (Utilities)
+   ============================================ */
+
+/* Text Utilities */
+.text-gradient {
+    background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-glow {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Spacing Utilities */
+.section-padding {
+    padding: 96px 0;
+}
+
+.container-custom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Animation Utilities */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(-5deg) scale(1);
+    }
+    50% {
+        transform: rotate(5deg) scale(1.1);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-wiggle {
+    animation: wiggle 2s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Logo Float Animation */
+@keyframes logo-float {
+    0%, 100% {
+        transform: rotate(-15deg) translateY(0) translateX(0);
+    }
+    25% {
+        transform: rotate(-12deg) translateY(-10px) translateX(5px);
+    }
+    50% {
+        transform: rotate(-18deg) translateY(-5px) translateX(-5px);
+    }
+    75% {
+        transform: rotate(-13deg) translateY(-15px) translateX(3px);
+    }
+}
+
+.animate-logo-float {
+    animation: logo-float 8s ease-in-out infinite;
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 64px 0;
+    }
+    
+    .container-custom {
+        padding: 0 16px;
+    }
+}
+
+/* Large Screen Container Adjustments */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+        padding-left: 4rem !important;
+        padding-right: 4rem !important;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1280px;
+        padding-left: 6rem !important;
+        padding-right: 6rem !important;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1400px;
+        padding-left: 10rem !important;
+        padding-right: 10rem !important;
+    }
+}
+

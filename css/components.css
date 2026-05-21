@@ -1,0 +1,210 @@
+/* ============================================
+   کامپوننت‌های قابل استفاده مجدد
+   ============================================ */
+
+/* Glassmorphism Effects */
+.glass-panel {
+    background: rgba(17, 24, 39, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px -5px rgba(59, 130, 246, 0.15);
+}
+
+/* Ambient Glows */
+.ambient-glow {
+    position: fixed;
+    width: min(800px, 100vw);
+    height: min(800px, 100vw);
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(0,0,0,0) 70%);
+    top: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Floating Numbers Animation */
+@keyframes floatUpFade {
+    0% {
+        transform: translateY(100%) scale(var(--scale));
+        opacity: 0;
+    }
+    10% {
+        opacity: var(--opacity);
+    }
+    90% {
+        opacity: var(--opacity);
+    }
+    100% {
+        transform: translateY(-120vh) scale(var(--scale)); 
+        opacity: 0;
+    }
+}
+
+.floating-number {
+    position: absolute;
+    font-family: monospace;
+    font-weight: 600; 
+    user-select: none;
+    pointer-events: none; 
+    white-space: nowrap;
+    animation-name: floatUpFade;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    bottom: -10%;
+}
+
+.floating-number.near {
+    z-index: 1; 
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.12);
+    text-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+.floating-number.far {
+    z-index: 0; 
+    font-size: 0.9rem;
+    color: rgba(59, 130, 246, 0.2); 
+    filter: blur(1px);
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(11, 15, 25, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-container {
+    background: linear-gradient(180deg, rgba(17, 24, 39, 0.95) 0%, rgba(11, 15, 25, 0.98) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(59, 130, 246, 0.2);
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-overlay.active .modal-container {
+    transform: scale(1) translateY(0);
+}
+
+.modal-header {
+    padding: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 900;
+    color: white;
+    margin: 0;
+}
+
+.modal-close {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.modal-close:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.4);
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+.modal-footer {
+    padding: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* Button Styles */
+.btn-primary {
+    background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+

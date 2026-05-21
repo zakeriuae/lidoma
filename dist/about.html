@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script>
+        (function () {
+            var s = localStorage.getItem('lidoma_lang');
+            if (s && ['fa', 'en', 'ar'].includes(s)) { document.documentElement.lang = s; document.documentElement.dir = (s === 'fa' || s === 'ar') ? 'rtl' : 'ltr'; }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما | لیدوما</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-DxTQ833_.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16-CmRP0Fsg.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32-Chu4SuIS.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-l9RE-gBB.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/android-chrome-192x192-BeN8iz8T.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512-D3YWklLG.png">
+    <link rel="manifest" href="/assets/site-Bm-9lS1x.webmanifest">
+
+    <!-- Fonts: Vazirmatn -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons: Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Stylesheets -->
+  <link rel="stylesheet" crossorigin href="/assets/style-iKRqyrcQ.css">
+</head>
+
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Background Effects -->
+    <div
+        class="fixed inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-[0.03] pointer-events-none">
+    </div>
+    <div class="ambient-glow"></div>
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 border-b border-white/5 bg-[#0B0F19]/80 backdrop-blur-xl transition-all duration-300">
+        <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="/assets/Lidoma-CY2Jzvud.png" alt="لیدوما" class="w-10 h-10 object-contain">
+                    <span class="text-2xl font-black text-white tracking-tight">لیدوما</span>
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+                <a href="index.html" class="hover:text-white transition duration-300" data-i18n="nav_home">Home</a>
+                <a href="index.html#features" class="hover:text-white transition duration-300"
+                    data-i18n="nav_features">Features</a>
+                <a href="index.html#consultants" class="hover:text-white transition duration-300"
+                    data-i18n="nav_consultants">Consultants</a>
+                <a href="index.html#leads" class="hover:text-white transition duration-300" data-i18n="nav_leads">Lead
+                    Store</a>
+                <a href="about.html" class="text-white font-bold" data-i18n="nav_about">About Us</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <div class="flex gap-1 text-sm">
+                    <button class="px-2 py-1 rounded hover:bg-white/5 transition text-slate-400"
+                        data-lang-switch="en">EN</button>
+                    <span class="text-slate-600">|</span>
+                    <button class="px-2 py-1 rounded hover:bg-white/5 transition text-slate-400"
+                        data-lang-switch="fa">FA</button>
+                    <span class="text-slate-600">|</span>
+                    <button class="px-2 py-1 rounded hover:bg-white/5 transition text-slate-400"
+                        data-lang-switch="ar">AR</button>
+                </div>
+                <a href="index.html"
+                    class="glass-panel hover:bg-white/10 text-white px-6 py-2.5 rounded-full text-sm font-bold transition border border-white/10 hover:border-white/20 shadow-lg hover:shadow-glow-brand"
+                    data-i18n="nav_back">
+                    Back
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-16 lg:pt-40 lg:pb-24 relative overflow-hidden">
+        <div class="absolute top-40 right-0 w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[100px] -z-10 animate-pulse"
+            style="animation-duration: 4s"></div>
+
+        <!-- Background Logo with Animation -->
+        <div class="absolute inset-0 flex items-center justify-center -z-0 opacity-10">
+            <img src="/assets/Lidoma-CY2Jzvud.png" alt="لیدوما"
+                class="w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] object-contain animate-logo-float"
+                style="transform: rotate(-15deg);">
+        </div>
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-brand-400 text-xs font-bold backdrop-blur-md mb-6 shadow-glow-brand">
+                <i data-lucide="info" class="w-4 h-4"></i>
+                <span data-i18n="about_badge">About Lidoma</span>
+            </div>
+            <h1 class="text-4xl lg:text-6xl font-black text-white leading-tight mb-6" data-i18n="about_hero_title">
+                Who We Are
+            </h1>
+            <p class="text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto" data-i18n="about_hero_desc">
+                Lidoma is a comprehensive platform for lead management and sales in medical and beauty sectors
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 pb-24 space-y-24">
+
+        <!-- Mission Section -->
+        <section class="glass-panel rounded-3xl p-8 md:p-12 border border-white/10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block bg-brand-500/10 text-brand-400 border border-brand-500/20 px-3 py-1 rounded-full text-xs font-bold mb-6"
+                        data-i18n="about_mission_badge">
+                        Our Mission
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-black text-white mb-6" data-i18n="about_mission_title">
+                        Connecting Clinics with Customers
+                    </h2>
+                    <p class="text-slate-300 text-lg leading-relaxed mb-6" data-i18n="about_mission_desc">
+                        We believe the main problem for clinics isn't lead generation. It's lead management and
+                        follow-up. Lidoma solves this with unified sales infrastructure.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-500/20 p-2 rounded-lg text-brand-400 mt-1">
+                                <i data-lucide="target" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold mb-1" data-i18n="about_goal_title">Our Goal</h3>
+                                <p class="text-slate-400" data-i18n="about_goal_desc">Transform every clinic into an
+                                    efficient sales machine</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-500/20 p-2 rounded-lg text-brand-400 mt-1">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold mb-1" data-i18n="about_values_title">Values</h3>
+                                <p class="text-slate-400" data-i18n="about_values_desc">Transparency, quality, and
+                                    commitment to customer success</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-brand-500/20 blur-3xl rounded-full"></div>
+                    <div class="relative glass-card p-8 rounded-3xl text-center">
+                        <div class="text-6xl font-black text-brand-400 mb-4">+20</div>
+                        <div class="text-xl text-white font-bold mb-2" data-i18n="about_active_clinics">Active Clinics
+                        </div>
+                        <div class="text-slate-400" data-i18n="about_using_platform">Using Lidoma Platform</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-black text-white mb-4" data-i18n="about_why_title">Why Lidoma?</h2>
+                <p class="text-slate-400" data-i18n="about_why_subtitle">What sets us apart</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6">
+                    <div
+                        class="bg-brand-500/20 w-14 h-14 rounded-xl flex items-center justify-center text-brand-400 mb-4">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="about_security_title">High Security</h3>
+                    <p class="text-slate-400 leading-relaxed" data-i18n="about_security_desc">
+                        All your data is protected with the highest security standards
+                    </p>
+                </div>
+                <div class="p-6">
+                    <div
+                        class="bg-brand-500/20 w-14 h-14 rounded-xl flex items-center justify-center text-brand-400 mb-4">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="about_speed_title">High Speed</h3>
+                    <p class="text-slate-400 leading-relaxed" data-i18n="about_speed_desc">
+                        The system operates at high speed and guarantees a smooth user experience
+                    </p>
+                </div>
+                <div class="p-6">
+                    <div
+                        class="bg-brand-500/20 w-14 h-14 rounded-xl flex items-center justify-center text-brand-400 mb-4">
+                        <i data-lucide="headphones" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="about_support_title">24/7 Support</h3>
+                    <p class="text-slate-400 leading-relaxed" data-i18n="about_support_desc">
+                        Our support team is always available to help you
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-black text-white mb-4" data-i18n="about_team_title">Our Team</h2>
+                <p class="text-slate-400" data-i18n="about_team_subtitle">The people behind Lidoma</p>
+            </div>
+            <div id="team-grid" class="flex flex-wrap justify-center gap-8">
+                <div class="text-center" data-show-langs="fa">
+                    <div class="w-48 h-48 rounded-xl mx-auto mb-3 overflow-hidden border-2 border-white/10 relative">
+                        <img src="/assets/Gemini_Generated_Image_w3n28ow3n28ow3n2-CaKouxii.jpg" alt="محمدرضا ذاکری"
+                            class="w-full h-full object-cover scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-br from-brand-500/20 to-purple-600/20"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">محمدرضا ذاکری</h3>
+                    <p class="text-brand-400 mb-3" data-i18n="ceo">CEO</p>
+                    <p class="text-slate-400 text-sm leading-relaxed line-clamp-2" data-i18n="team_exp_ceo">10+ years
+                        experience in technology and startups</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-48 h-48 rounded-xl mx-auto mb-3 overflow-hidden border-2 border-white/10 relative">
+                        <img src="/assets/Gemini_Generated_Image_fyt3qyfyt3qyfyt3-bR1I_rGs.jpg" alt="آنیتا مددی"
+                            class="w-full h-full object-cover scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-br from-brand-500/20 to-purple-600/20"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">آنیتا مددی</h3>
+                    <p class="text-brand-400 mb-3" data-i18n="sales_manager">Sales Manager</p>
+                    <p class="text-slate-400 text-sm leading-relaxed line-clamp-2" data-i18n="team_exp_sales">Expert in
+                        marketing and medical services sales</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-48 h-48 rounded-xl mx-auto mb-3 overflow-hidden border-2 border-white/10 relative">
+                        <img src="/assets/Gemini_Generated_Image_xb7n3xb7n3xb7n3x-D9qGq6f7.jpg" alt="سروش کیانی"
+                            class="w-full h-full object-cover scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-br from-brand-500/20 to-purple-600/20"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">سروش کیانی</h3>
+                    <p class="text-brand-400 mb-3" data-i18n="customer_manager">Customer Relations Manager</p>
+                    <p class="text-slate-400 text-sm leading-relaxed line-clamp-2" data-i18n="team_exp_customer">Expert
+                        in customer relations and after-sales service</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-48 h-48 rounded-xl mx-auto mb-3 overflow-hidden border-2 border-white/10 relative">
+                        <img src="/assets/Gemini_Generated_Image_v9xm8iv9xm8iv9xm-DYR73nRJ.jpg" alt="مهدی رضایی"
+                            class="w-full h-full object-cover scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-br from-brand-500/20 to-purple-600/20"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">مهدی رضایی</h3>
+                    <p class="text-brand-400 mb-3" data-i18n="hr_manager">HR Manager</p>
+                    <p class="text-slate-400 text-sm leading-relaxed line-clamp-2" data-i18n="team_exp_hr">Expert in
+                        management and HR development</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#020408] border-t border-white/5 text-slate-500 py-8 text-sm relative z-20">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <img src="/assets/Lidoma-CY2Jzvud.png" alt="لیدوما" class="w-10 h-10 object-contain">
+                    <span class="text-2xl font-black text-white">لیدوما</span>
+                </div>
+                <p class="max-w-sm leading-relaxed text-slate-400" data-i18n="footer_desc">Iran's first dedicated lead
+                    marketing platform for medical and beauty centers.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 text-lg" data-i18n="footer_licenses">Licenses</h4>
+                <div class="flex gap-3">
+                    <div class="glass-panel rounded-lg p-3 border border-white/10 w-20 h-20 flex items-center justify-center overflow-hidden flex-shrink-0 cursor-not-allowed"
+                        style="pointer-events: none;">
+                        <img src="/assets/image_2024-06-09_08-56-42-1.png-CftzVOqx.webp" alt="مجوز"
+                            class="w-full h-full object-contain grayscale">
+                    </div>
+                    <a href="https://qr.mojavez.ir/track/7667219" target="_blank" rel="noopener noreferrer"
+                        class="glass-panel rounded-lg p-3 border border-white/10 w-20 h-20 flex items-center justify-center overflow-hidden flex-shrink-0 hover:border-brand-400/50 transition">
+                        <img src="/assets/6ba22de8.png-h-9m-DgF.webp" alt="مجوز" class="w-full h-full object-contain">
+                    </a>
+                    <a href="https://qr.mojavez.ir/track/6052460" target="_blank" rel="noopener noreferrer"
+                        class="glass-panel rounded-lg p-3 border border-white/10 w-20 h-20 flex items-center justify-center overflow-hidden flex-shrink-0 hover:border-brand-400/50 transition">
+                        <img src="/assets/0000-WO6Lvt2K.webp" alt="مجوز" class="w-full h-full object-contain">
+                    </a>
+                    <div class="glass-panel rounded-lg p-3 border border-white/10 w-20 h-20 flex items-center justify-center overflow-hidden flex-shrink-0 cursor-not-allowed"
+                        style="pointer-events: none;">
+                        <img src="/assets/enamad_icon_text_color_blue_1024-1-BLOXIjUF.png" alt="مجوز"
+                            class="w-full h-full object-contain grayscale">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 text-lg" data-i18n="footer_contact">Contact Us</h4>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4 text-brand-400 flex-shrink-0"></i>
+                        <div class="flex gap-3">
+                            <a href="tel:+982181640162" class="hover:text-brand-400 transition" dir="ltr"
+                                data-i18n="contact_landline_display"
+                                data-i18n-href="contact_landline_href">02181640162</a>
+                            <a href="tel:+989124452898" class="hover:text-brand-400 transition" dir="ltr"
+                                data-i18n="contact_mobile_display" data-i18n-href="contact_mobile_href">09124452898</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2 text-slate-400 text-sm leading-relaxed">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-brand-400 flex-shrink-0 mt-1"></i>
+                        <span data-i18n="footer_address">Kamaranieh North, Saidi St., Hosseini St., No. 4</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="container mx-auto px-6 mt-8 pt-6 border-t border-white/5 text-center flex flex-col md:flex-row justify-between items-center gap-4">
+            <p data-i18n="footer_rights">© 2024 Lidoma. All rights reserved.</p>
+            <div class="flex gap-4 text-xl">
+                <i data-lucide="instagram" class="hover:text-brand-400 cursor-pointer transition"></i>
+                <i data-lucide="linkedin" class="hover:text-brand-400 cursor-pointer transition"></i>
+                <i data-lucide="twitter" class="hover:text-brand-400 cursor-pointer transition"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS Files -->
+    <script src="js/i18n.js"></script>
+    <script src="js/modal.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            if (window.i18n && typeof window.i18n.init === 'function') {
+                await i18n.init();
+            }
+            lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>
