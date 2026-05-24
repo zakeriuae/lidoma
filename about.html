@@ -21,53 +21,11 @@
     <link rel="icon" type="image/png" sizes="512x512" href="assets/images/android-chrome-512x512.png">
     <link rel="manifest" href="assets/images/site.webmanifest">
 
-    <!-- Fonts: Vazirmatn -->
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <!-- Local Icons: Lucide -->
+    <script src="js/lucide.min.js"></script>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Icons: Lucide -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Custom CSS Files -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/utilities.css">
-
-    <!-- Custom Config -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        dark: {
-                            900: '#0B0F19',
-                            800: '#111827',
-                        },
-                        brand: {
-                            400: '#60A5FA',
-                            500: '#3B82F6',
-                            600: '#2563EB',
-                        },
-                        accent: {
-                            400: '#FBBF24',
-                            500: '#F59E0B',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Vazirmatn', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'glow-brand': '0 0 20px rgba(59, 130, 246, 0.4)',
-                        'glow-accent': '0 0 20px rgba(245, 158, 11, 0.4)',
-                    },
-                }
-            }
-        }
-    </script>
+    <!-- Local Stylesheet (Contains Tailwind CSS & Custom Styles) -->
+    <link rel="stylesheet" href="css/tailwind.css">
 </head>
 
 <body class="antialiased selection:bg-brand-500 selection:text-white">
