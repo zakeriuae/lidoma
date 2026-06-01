@@ -1,7 +1,0 @@
-@import "tailwindcss";
-@config "../tailwind.config.js";
-
-/* Custom Local CSS Files */
-@import "./main.css";
-@import "./components.css";
-@import "./utilities.css";
